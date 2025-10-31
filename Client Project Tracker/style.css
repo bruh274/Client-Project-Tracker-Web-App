@@ -1,0 +1,225 @@
+/* Root Variables*/
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --muted: #6b7280;
+  --text: #e5e7eb;
+  --accent: #22c55e;
+  --danger: #ef4444;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Segoe UI, Roboto, Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+/* Layout & Containers */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: var(--panel);
+  position: sticky;
+  top: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* Buttons & Links */
+.button {
+  background: var(--accent);
+  color: #062;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.button.small {
+  padding: 6px 10px;
+}
+
+.button.danger {
+  background: var(--danger);
+  color: #300;
+}
+
+.link {
+  color: #93c5fd;
+  padding: 8px 0;
+}
+
+/* Dashboard Stats */
+.grid.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stat {
+  background: var(--panel);
+  padding: 18px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.kpi {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.label {
+  color: var(--muted);
+}
+
+/* Controls & Tables */
+.controls {
+  background: var(--panel);
+  padding: 12px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.table-wrap {
+  background: var(--panel);
+  border-radius: 14px;
+  padding: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #1f2937;
+  text-align: left;
+}
+
+/* Progress Bar */
+.bar {
+  height: 10px;
+  background: #1f2937;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+/* Empty State */
+.empty {
+  padding: 24px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Forms */
+.form {
+  display: grid;
+  gap: 12px;
+  max-width: 640px;
+}
+
+.form input,
+.form textarea,
+.controls select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+  background: #0b1220;
+  color: var(--text);
+}
+
+.form button {
+  background: var(--accent);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 700;
+}
+
+/* Auth & Cards */
+.auth {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background: var(--panel);
+  padding: 24px;
+  border-radius: 16px;
+  width: min(92vw, 480px);
+}
+
+/* Notices */
+.notice {
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.notice.success {
+  background: #052e1a;
+  color: #86efac;
+}
+
+.notice.error {
+  background: #3b0d0d;
+  color: #fecaca;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0 14px;
+}
+
+.tab {
+  background: #1f2937;
+  border: none;
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tab.active {
+  outline: 2px solid #334155;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: grid;
+  gap: 10px;
+}
